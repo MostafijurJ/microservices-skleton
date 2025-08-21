@@ -1,0 +1,21 @@
+server:
+  port: 8883
+  servlet:
+    context-path: /course
+
+
+spring:
+  application:
+    name: course-service
+  profiles:
+    active: k8s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
