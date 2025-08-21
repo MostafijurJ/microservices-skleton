@@ -23,8 +23,9 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     env:
-      DOCKERHUB_REPO: mostafijurr/ms-${{ github.event.inputs.service }}
+      IMAGE_NAME: mostafijurr/ms-${{ github.event.inputs.service }}
       IMAGE_TAG: ${{ github.event.inputs.tag }}
+      SERVICE_DIR: ${{ github.event.inputs.service }}-service
 
     steps:
       - name: Checkout code
@@ -42,8 +43,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./${{ github.event.inputs.service }}
-          file: ./${{ github.event.inputs.service }}/Dockerfile
+          context: ./${{ env.SERVICE_DIR }}
+          file: ./${{ env.SERVICE_DIR }}/Dockerfile
           push: true
           tags: |
-            ${{ env.DOCKERHUB_REPO }}:${{ env.IMAGE_TAG }}
+            ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
