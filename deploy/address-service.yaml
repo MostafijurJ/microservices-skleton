@@ -17,8 +17,8 @@ spec:
     spec:
       containers:
         - name: address-service
-          image: mostafijurr/ms-address-service:1.1
-          imagePullPolicy: IfNotPresent
+          image: mostafijurr/ms-address-service:1.2
+          imagePullPolicy: Always
           ports:
             - containerPort: 8881
           env:

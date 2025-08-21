@@ -18,7 +18,7 @@ spec:
       containers:
         - name: eureka-server
           image: mostafijurr/ms-eureka-service:1.0
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 8761
           env:

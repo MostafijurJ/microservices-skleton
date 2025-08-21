@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/address-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/address-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/course-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka-server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/getway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/getway.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/microservices.iml" filepath="$PROJECT_DIR$/.idea/microservices.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/student-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/student-service.main.iml" />
     </modules>

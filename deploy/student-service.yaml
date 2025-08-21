@@ -18,7 +18,7 @@ spec:
       containers:
         - name: student-service
           image: mostafijurr/ms-student-service:1.1
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 8882
           env:

@@ -19,3 +19,14 @@ management:
     health:
       probes:
         enabled: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 10
+    instance-id: ${spring.application.name}:${random.value}
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    registry-fetch-interval-seconds: 3

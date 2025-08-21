@@ -9,6 +9,18 @@ spring:
   application:
     name: address-service
 
+
+eureka:
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 10
+    instance-id: ${spring.application.name}:${random.value}
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    registry-fetch-interval-seconds: 3
+
 management:
   endpoints:
     web:

@@ -16,3 +16,6 @@ management:
     health:
       probes:
         enabled: true
+
+ignore:
+  header-param: '${IGNORE_HEADER_PARAM_FOR_LOG:password,cookie,authorization}'
