@@ -20,7 +20,7 @@ spec:
           image: mostafijurr/ms-address-service:1.2
           imagePullPolicy: Always
           ports:
-            - containerPort: 8881
+            - containerPort: 8080
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: k8s
@@ -36,13 +36,13 @@ spec:
           readinessProbe:
             httpGet:
               path: /address/actuator/health
-              port: 8881
+              port: 8080
             initialDelaySeconds: 5
             periodSeconds: 10
           livenessProbe:
             httpGet:
               path: /address/actuator/health
-              port: 8881
+              port: 8080
             initialDelaySeconds: 10
             periodSeconds: 20
 ---
@@ -59,5 +59,5 @@ spec:
   type: ClusterIP
   ports:
     - name: http
-      port: 8881
-      targetPort: 8881
+      port: 8080
+      targetPort: 8080

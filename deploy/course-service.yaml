@@ -20,7 +20,7 @@ spec:
           image: mostafijurr/ms-course-service:1.1
           imagePullPolicy: Always
           ports:
-            - containerPort: 8883
+            - containerPort: 8080
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: k8s
@@ -37,13 +37,13 @@ spec:
           readinessProbe:
             httpGet:
               path: /course/actuator/health
-              port: 8883
+              port: 8080
             initialDelaySeconds: 5
             periodSeconds: 10
           livenessProbe:
             httpGet:
               path: /course/actuator/health
-              port: 8883
+              port: 8080
             initialDelaySeconds: 10
             periodSeconds: 20
 ---
@@ -60,5 +60,5 @@ spec:
   type: ClusterIP
   ports:
     - name: http
-      port: 8883
-      targetPort: 8883
+      port: 8080
+      targetPort: 8080
